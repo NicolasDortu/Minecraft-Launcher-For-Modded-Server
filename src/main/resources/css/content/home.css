@@ -1,0 +1,46 @@
+.box-pane {
+    -fx-background-color: transparent;
+}
+
+.play-btn {
+    -fx-background-radius: 10px;
+    -fx-font-size: 50px;
+    -fx-text-fill: #F5F5F5;
+    -fx-background-color: #883adcb7;
+    -fx-margin-top: 100px;
+
+}
+
+.play-icon {
+    -fx-fill: white;
+}
+
+.play-btn:hover {
+    -fx-background-color: #883adc7d;
+}
+
+.download-progress {
+    -fx-max-width: 1000;
+    -fx-pref-width: 1000;
+    -fx-min-width: 100;
+    -fx-min-height: 10px;
+    -fx-max-height: 10px;
+}
+
+.download-progress > .bar {
+    -fx-background-color: #883adc6e;
+    -fx-background-insets: 0;
+    -fx-background-radius: 30px;
+}
+
+.download-progress > .track {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 30px;
+}
+
+.download-status {
+    -fx-text-alignment: center;
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-font-family: "Minecraftia";
+}

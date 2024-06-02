@@ -1,0 +1,97 @@
+plugins {
+    id 'java-library'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'com.github.johnrengelman.shadow' version '7.1.1'
+}
+
+apply plugin: 'org.openjfx.javafxplugin'
+
+group = 'net.nico'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://litarvan.github.io/maven'
+        name = 'LitarvanMaven'
+    }
+
+    maven {
+        url = 'https://jitpack.io'
+        name = 'JitPack'
+    }
+}
+
+dependencies {
+    implementation 'fr.litarvan:openauth:1.1.6'
+    implementation 'fr.flowarg:materialdesignfontfx:7.2.96-2'
+
+    implementation 'fr.flowarg:flowupdater:1.8.+'
+    implementation 'fr.flowarg:openlauncherlib:3.2.6'
+    implementation 'fr.flowarg:flowupdater-curseforgeplugin:2+'
+    implementation 'fr.flowarg:flowupdater-optifineplugin:2+'
+
+    implementation 'com.github.goxr3plus:FX-BorderlessScene:4+'
+    implementation 'com.github.oshi:oshi-core:5+'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'commons-net:commons-net:3.8.0'
+
+
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs 'src/main/resources'
+        }
+    }
+}
+
+javafx {
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.web', 'javafx.swing']
+}
+
+application {
+    getMainClass().set('net.nico.minecraftlauncher.Main')
+}
+
+compileJava {
+    options.encoding = "UTF-8"
+}
+
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+// task runFtpDownloadApache(type: JavaExec) {
+//     group = 'Application'
+//     description = 'Runs the FtpDownloadApache class'
+//     classpath = sourceSets.main.runtimeClasspath
+//     main = 'net.nico.minecraftlauncher.utils.FtpDownloadApache'
+// }
+shadowJar {
+    archiveBaseName.set('minecraftlauncher')
+    archiveClassifier.set('')
+    archiveVersion.set('')
+    manifest {
+        attributes 'Main-Class': 'net.nico.minecraftlauncher.Main'
+    }
+}
+
+// //jlink
+// // Define a variable for the path to the JavaFX JMOD files
+// def javafxJmodsDir = 'libs/javafx-jmods-17.0.10'
+
+// task createRuntimeImage(type: Exec) {
+//     dependsOn 'shadowJar'
+//     doFirst {
+//         delete 'build/image'
+//     }
+//     commandLine 'jlink', '--no-header-files', '--no-man-pages', '--compress=2',
+//                 '--module-path', "${System.properties['java.home']}/jmods" + File.pathSeparator + javafxJmodsDir + File.pathSeparator + 'build/libs' + File.pathSeparator + 'C:/Users/Nico/.gradle/caches/modules-2/files-2.1',
+//                 '--add-modules', 'java.base,javafx.controls,javafx.fxml,javafx.web,javafx.swing',
+//                 '--output', 'build/image'
+// }

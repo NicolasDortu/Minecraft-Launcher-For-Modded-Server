@@ -1,0 +1,68 @@
+.app-layout {
+    -fx-background: rgb(10, 12, 12);
+    -fx-background-image: url("/images/background.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-font-family: "Minecraft Ten";
+}
+
+.sidemenu {
+    -fx-background-color: rgba(201, 181, 181, 0.4);
+}
+
+
+.home-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Minecraft Ten";
+}
+
+.sidemenu-nav-btn {
+    -fx-border-width: 0 0 0 10px;
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-text-alignment: left;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    -fx-max-width: 350px;
+    -fx-border-color: transparent;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-family: "Minecraftia";
+}
+
+
+
+.sidemenu-nav-btn.button {
+    -fx-alignment: center-left;
+}
+
+.sidemenu-nav-btn:hover {
+    -fx-background-color: #883adc3d;
+}
+
+.sidemenu-nav-btn.active {
+    -fx-border-color: #883adc6e;
+}
+
+.nav-content {
+    -fx-background-color: transparent;
+}
+
+.user-pane {
+    -fx-background-color: #883adc6e;
+}
+
+.logout-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-family: "Minecraftia";
+}
+
+.logout-icon {
+    -fx-fill: white;
+}
+
+.logout-btn:hover {
+    -fx-background-radius: 10px;
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
