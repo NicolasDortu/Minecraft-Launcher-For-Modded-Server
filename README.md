@@ -1,9 +1,9 @@
 # Minecraft-Launcher-For-Modded-Server
-This is a custom launcher for a modded minecraft server i used to play on with some friends <br>
+This is a custom launcher for a modded minecraft server i used to play on with some friends <br><br>
 Almost the entirety of the code is from the project Javafx-launcher available here : https://github.com/Support-Launcher/javafx-launcher <br>
 I also highly recommend the youtube serie from Bricklou which explains the code : https://www.youtube.com/playlist?list=PL4Iry42iWxQQo-xMzk2BRO1YOoHgG-slU <br>
 It also heavily relies on FlowUpdater : https://github.com/FlowArg/FlowUpdater <br>
-Big Shout-out to Bricklou and FlowArg for their work which helped me to have some fun with my friends on our minecraft server 🙌 <br>
+Big Shout-out to Bricklou and FlowArg for their work which helped me to have some fun with my friends on our minecraft server 🙌 <br><br>
 Here are my modifications from the source code : <br>
 <ul>
   <li>New design</li>
@@ -16,7 +16,12 @@ Here are my modifications from the source code : <br>
   <li>DownloadUpdate is called if the user want to download newer version and a cmd script in Main Class will replace the launcher by the newer version once downloaded</li>
 </ul><br>
 
-I use my Django WebApp hosted on PythonAnywhere to store the files and download them. The code is available here : https://github.com/NicolasDortu/Django-Minecraft-Server-WebApp <br>
+I use my Django WebApp hosted on PythonAnywhere to store the files and download them. The code is available here : https://github.com/NicolasDortu/Django-Minecraft-Server-WebApp <br><br>
+To create the .exe I use Launch4J and in order to distribute the file to friend i create an installer with the .exe file and a Java JDK using Inno. You can follow these tutorials which are very explicatives : <br>
+<ul>
+  <li>Jar to Exe : https://www.youtube.com/watch?v=51iMSVUOQNM</li>
+  <li>Bundle an Exe and a JRE/JDK : https://www.youtube.com/watch?v=k6m2a1OtfZ4 </li>
+</ul>
 
 ## Connection page :
 ![image](https://github.com/NicolasDortu/Minecraft-Launcher-For-Modded-Server/assets/126513916/14fbd130-4894-409d-88d4-0d30dff906e3)
